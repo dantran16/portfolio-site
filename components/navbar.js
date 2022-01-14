@@ -1,3 +1,4 @@
+import { React } from 'react'
 import Logo from './logo'
 import NextLink from 'next/link'
 import {
@@ -7,15 +8,11 @@ import {
   Stack, 
   Heading, 
   Flex, 
-  Menu,
-  MenuItem,
-  MenuList,
-  MenuButton,
-  IconButton,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
+import DrawerComponent from './drawer'
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
@@ -63,30 +60,13 @@ const Navbar = props => {
           <LinkItem href="/about" path={path}>
             About Me
           </LinkItem>
+          <LinkItem href="/contact" path={path}>
+            Contact Me
+          </LinkItem>
         </Stack>
         <Box flex={1} align="right">
           <ThemeToggleButton />
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>Projects</MenuItem>
-                </NextLink>
-                <NextLink href="/about" passHref>
-                  <MenuItem as={Link}>About Me</MenuItem>
-                </NextLink>
-              </MenuList>
-            </Menu>
-          </Box>
+          <DrawerComponent/>
         </Box>
       </Container>
     </Box>

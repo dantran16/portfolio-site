@@ -1,4 +1,6 @@
 import { Container, Box, Heading, Image, useColorModeValue } from '@chakra-ui/react'
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
 
 const Page = () => {
   return (
@@ -27,6 +29,28 @@ const Page = () => {
           />
         </Box>
       </Box>
+
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Projects
+        </Heading>
+        
+      </Section>
+
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          About Me
+        </Heading>
+        <Paragraph>I am an adaptable full stack developer and UX designer based in California. I am passionate in improving the experience of people. With my curiosity to learn, I am confident in my ability to create the best experience for users.
+        </Paragraph>
+        <Paragraph> Learn More!</Paragraph>
+      </Section>
+
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Links
+        </Heading>
+      </Section>
     </Container>
   )
 }
