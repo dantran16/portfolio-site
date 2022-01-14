@@ -41,7 +41,7 @@ const DrawerComponent = () => {
     
     <Drawer
       isOpen={isOpen}
-      placement='top'
+      placement='right'
       onClose={onClose}
       finalFocusRef={btnRef}
     >

@@ -10,7 +10,6 @@ import {
   Flex, 
   useColorModeValue,
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import DrawerComponent from './drawer'
 
