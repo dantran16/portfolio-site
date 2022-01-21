@@ -10,6 +10,7 @@ import {
   DrawerBody,
   useDisclosure,
   Button,
+  Icon,
   IconButton,
   Box,
   Stack,
@@ -20,6 +21,9 @@ import {
 } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import Logo from './logo'
+import { FaHome as HomeIcon } from 'react-icons/fa'
+import { BsFillPersonFill as AboutIcon } from 'react-icons/bs'
+import { MdWork as ProjectsIcon, MdOutlineContactPage as ContactIcon } from 'react-icons/md'
 
 const DrawerComponent = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -55,16 +59,16 @@ const DrawerComponent = () => {
         <DrawerBody>
           <Stack fontSize={'xl'}>
             <NextLink href="/" passHref>
-              <Link>Home</Link>
+              <Link><Icon boxSize={3.5} as={ HomeIcon } /> Home</Link>
             </NextLink>
             <NextLink href="/projects" passHref>
-              <Link>Projects</Link>
+              <Link><Icon boxSize={3.5} as={ ProjectsIcon } /> Projects</Link>
             </NextLink>
             <NextLink href="/about" passHref>
-              <Link>About Me</Link>
+              <Link><Icon boxSize={3.5} as={ AboutIcon } /> About</Link>
             </NextLink>
             <NextLink href="/contact" passHref>
-              <Link>Contact Me</Link>
+              <Link><Icon boxSize={3.5} as={ ContactIcon } /> Contact</Link>
             </NextLink>
           </Stack>
         </DrawerBody>

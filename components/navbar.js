@@ -9,9 +9,13 @@ import {
   Heading, 
   Flex, 
   useColorModeValue,
+  Icon
 } from '@chakra-ui/react'
 import ThemeToggleButton from './theme-toggle-button'
 import DrawerComponent from './drawer'
+import { BsFillPersonFill as AboutIcon } from 'react-icons/bs'
+import { MdWork as ProjectsIcon, MdOutlineContactPage as ContactIcon } from 'react-icons/md'
+
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
@@ -46,7 +50,7 @@ const Navbar = props => {
           </Heading>
         </Flex>
         <Stack
-          direction={{ base: 'column', md: 'row' }}
+          direction='row'
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
@@ -54,13 +58,13 @@ const Navbar = props => {
           mt={{base:4, nmd: 0}}
         >
           <LinkItem href="/projects" path={path}>
-            Projects
+            <Icon boxSize={3.5} as={ ProjectsIcon } /> <span>Projects</span>
           </LinkItem>
           <LinkItem href="/about" path={path}>
-            About Me
+            <Icon boxSize={3.5} w={4} h={4} as={ AboutIcon } /> About
           </LinkItem>
           <LinkItem href="/contact" path={path}>
-            Contact Me
+            <Icon boxSize={3.5} w={4} h={4} as={ ContactIcon } /> Contact
           </LinkItem>
         </Stack>
         <Box flex={1} align="right">

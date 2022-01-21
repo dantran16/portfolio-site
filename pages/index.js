@@ -48,7 +48,7 @@ const Page = () => {
           </Paragraph>
           <Box align="left" my={4} size="lg">
             <NextLink href="/about">
-              <Button isFullWidth={true} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant='outline'>Learn more</Button> 
+              <Button fontSize={20}isFullWidth={true} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant='outline'>Learn more</Button> 
             </NextLink>
           </Box>
         </Section>
