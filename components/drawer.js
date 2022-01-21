@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Link,
   Heading, 
   Drawer,
   DrawerOverlay,
@@ -19,13 +18,14 @@ import {
 import {
   HamburgerIcon
 } from '@chakra-ui/icons'
-import NextLink from 'next/link'
 import Logo from './logo'
+import LinkItem from './LinkItem'
+
 import { FaHome as HomeIcon } from 'react-icons/fa'
 import { BsFillPersonFill as AboutIcon } from 'react-icons/bs'
 import { MdWork as ProjectsIcon, MdOutlineContactPage as ContactIcon } from 'react-icons/md'
 
-const DrawerComponent = () => {
+const DrawerComponent = ({ path }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
   return (
@@ -58,18 +58,18 @@ const DrawerComponent = () => {
         </DrawerHeader>
         <DrawerBody>
           <Stack fontSize={'xl'}>
-            <NextLink href="/" passHref>
-              <Link><Icon boxSize={3.5} as={ HomeIcon } /> Home</Link>
-            </NextLink>
-            <NextLink href="/projects" passHref>
-              <Link><Icon boxSize={3.5} as={ ProjectsIcon } /> Projects</Link>
-            </NextLink>
-            <NextLink href="/about" passHref>
-              <Link><Icon boxSize={3.5} as={ AboutIcon } /> About</Link>
-            </NextLink>
-            <NextLink href="/contact" passHref>
-              <Link><Icon boxSize={3.5} as={ ContactIcon } /> Contact</Link>
-            </NextLink>
+            <LinkItem href="/" path={path}>
+              <Icon boxSize={4} as={ HomeIcon } /> <span>Home</span>
+            </LinkItem>
+            <LinkItem href="/projects" path={path}>
+              <Icon boxSize={4} as={ ProjectsIcon } /> <span>Projects</span>
+            </LinkItem>
+            <LinkItem href="/about" path={path}>
+              <Icon boxSize={4} w={4} h={4} as={ AboutIcon } /> About
+            </LinkItem>
+            <LinkItem href="/contact" path={path}>
+              <Icon boxSize={4} w={4} h={4} as={ ContactIcon } /> Contact
+            </LinkItem>
           </Stack>
         </DrawerBody>
       </DrawerContent>

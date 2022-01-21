@@ -1,10 +1,8 @@
 import { React } from 'react'
 import Logo from './logo'
-import NextLink from 'next/link'
 import {
   Container,
   Box,
-  Link,
   Stack, 
   Heading, 
   Flex, 
@@ -15,21 +13,7 @@ import ThemeToggleButton from './theme-toggle-button'
 import DrawerComponent from './drawer'
 import { BsFillPersonFill as AboutIcon } from 'react-icons/bs'
 import { MdWork as ProjectsIcon, MdOutlineContactPage as ContactIcon } from 'react-icons/md'
-
-
-const LinkItem = ({ href, path, children }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray200, whiteAlpha.900')
-  return (
-    <NextLink href={href}>
-      <Link p={2} bg={active ? 'glassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
-      >
-        {children}
-      </Link>
-    </NextLink>
-  )
-}
+import LinkItem from './LinkItem'
 
 const Navbar = props => {
   const { path } = props
