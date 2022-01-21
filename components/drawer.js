@@ -2,18 +2,17 @@ import React from 'react'
 import {
   Link,
   Heading, 
-  ListItem,
   Drawer,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   DrawerHeader,
-  List,
   DrawerBody,
   useDisclosure,
   Button,
   IconButton,
   Box,
+  Stack,
   useColorModeValue
 } from '@chakra-ui/react'
 import {
@@ -54,20 +53,20 @@ const DrawerComponent = () => {
         </Heading>
         </DrawerHeader>
         <DrawerBody>
-          <List>
+          <Stack fontSize={'xl'}>
             <NextLink href="/" passHref>
-              <ListItem as={Link}>About</ListItem>
+              <Link>Home</Link>
             </NextLink>
             <NextLink href="/projects" passHref>
-              <ListItem as={Link}>Projects</ListItem>
+              <Link>Projects</Link>
             </NextLink>
             <NextLink href="/about" passHref>
-              <ListItem as={Link}>About Me</ListItem>
+              <Link>About Me</Link>
             </NextLink>
             <NextLink href="/contact" passHref>
-              <ListItem as={Link}>Contact Me</ListItem>
+              <Link>Contact Me</Link>
             </NextLink>
-          </List>
+          </Stack>
         </DrawerBody>
       </DrawerContent>
       </Drawer>
