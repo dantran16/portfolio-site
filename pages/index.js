@@ -5,6 +5,8 @@ import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 
+
+
 const Page = () => {
   return (
     <Layout>
@@ -15,7 +17,7 @@ const Page = () => {
 
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
-            <Heading as="h2" variant="page-title">
+            <Heading className={useColorModeValue('page-title-light', 'page-title-dark') + ' ' + 'page-title'} as="h2" variant="page-title">
               Dan Tran
             </Heading>
             <p>Full Stack Developer & UX Designer</p>
@@ -25,7 +27,7 @@ const Page = () => {
               borderColor="whiteAlpha.800"
               borderWidth={2}
               borderStyle="solid"
-              maxWidth="150px"
+              maxWidth="200px"
               display="inline-block"
               src="/images/profile.jpg"
               alt="Profile Image"
@@ -37,18 +39,22 @@ const Page = () => {
           <Heading as="h3" variant="section-title">
             Projects
           </Heading>
-          
+          <Box align="left" my={4} size="lg">
+            <NextLink href="/projects">
+              <Button fontSize={20} isFullWidth={true} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant='outline'>See More Projects</Button> 
+            </NextLink>
+          </Box>
         </Section>
 
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
             About Me
           </Heading>
-          <Paragraph>I am an adaptable full stack developer and UX designer based in California. I am passionate in improving the experience of people. With my curiosity to learn, I am confident in my ability to create the best experience for users.
+          <Paragraph>I am an adaptable full stack developer and UX designer based in California. I am passionate in improving the experience of people. With my curiosity to learn, I am confident in creating great products that anybody can use.
           </Paragraph>
           <Box align="left" my={4} size="lg">
             <NextLink href="/about">
-              <Button fontSize={20}isFullWidth={true} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant='outline'>Learn more</Button> 
+              <Button fontSize={20} isFullWidth={true} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant='outline'>Learn More About Me</Button> 
             </NextLink>
           </Box>
         </Section>

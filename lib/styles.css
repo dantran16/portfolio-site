@@ -1,0 +1,23 @@
+.page-title-dark{
+  color: transparent;
+  background: url(../public/images/background/zigzag-dark.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+.page-title-light{
+  color: transparent;
+  background: url(../public/images/background/zigzag-light.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
