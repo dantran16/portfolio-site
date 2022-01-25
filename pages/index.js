@@ -20,9 +20,11 @@ const Page = () => {
             <Heading className={useColorModeValue('page-title-light', 'page-title-dark') + ' ' + 'page-title'} as="h2" variant="page-title">
               Dan Tran
             </Heading>
-            <p>Full Stack Developer & UX Designer</p>
+            <p className={'line' + ' ' + useColorModeValue('typing-light', 'typing-dark')}>
+              Full Stack Developer & UX Designer
+            </p>
           </Box>
-          <Box flexShrink={0} mt={{base:4, md: 0}} mx={{md: 100}} align="center" >
+          <Box flexShrink={0} mt={{base:4, md: 0}} mx={{md: 50}} align="center" >
             <Image
               borderColor="whiteAlpha.800"
               borderWidth={2}

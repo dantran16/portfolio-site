@@ -1,10 +1,15 @@
+
+/* Heading Animation */
+.page-title{
+  animation: back 20s linear infinite;
+}
+
 .page-title-dark{
   color: transparent;
   background: url(../public/images/background/zigzag-dark.png);
   -webkit-background-clip: text;
   background-clip: text;
   background-position: 0 0;
-  animation: back 20s linear infinite;
 }
 
 .page-title-light{
@@ -13,11 +18,57 @@
   -webkit-background-clip: text;
   background-clip: text;
   background-position: 0 0;
-  animation: back 20s linear infinite;
 }
 
 @keyframes back{
   100%{
-    background-position: 2000px 0;
+    background-position: 1600px 0;
+  }
+}
+
+/* Typewriter Animation */
+.line {
+  font-size: 20px;
+  font-family: 'Fira Code', monospace;
+  border-right: 2px solid rgba(0,255, 255, 0);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.typing-dark{
+  animation: typewriter 2s steps(40) 0.5s 1 normal both,
+  blink-text-cursor-dark 500ms steps(40) infinite normal;
+}
+
+.typing-light{
+  animation: typewriter 2s steps(40) 0.5s 1 normal both,
+  blink-text-cursor-light 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter{
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20.5em;
+  }
+}
+
+@keyframes blink-text-cursor-dark {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75)
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes blink-text-cursor-light {
+  from {
+    border-right-color: rgba(0, 0, 0, 0.75)
+  }
+  to {
+    border-right-color: transparent;
   }
 }
