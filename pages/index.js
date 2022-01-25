@@ -12,7 +12,7 @@ const Page = () => {
     <Layout>
       <Container maxW='container.md'>
         <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align="center">
-          Hello, I&apos;m a Full Stack Developer & UX Designer based in California!
+          Hello, I&apos;m a Full Stack Developer based in California!
         </Box>
 
         <Box display={{ md: 'flex' }}>
@@ -21,12 +21,12 @@ const Page = () => {
               Dan Tran
             </Heading>
             <p className={'line' + ' ' + useColorModeValue('typing-light', 'typing-dark')}>
-              Full Stack Developer & UX Designer
+              Full Stack Developer
             </p>
           </Box>
-          <Box flexShrink={0} mt={{base:4, md: 0}} mx={{md: 50}} align="center" >
+          <Box flexShrink={0} mt={{base:4, md: 0}} mx={{md: 75}} align="center" >
             <Image
-              borderColor="whiteAlpha.800"
+              borderColor={useColorModeValue("blackAlpha.600", "whiteAlpha.800")}
               borderWidth={2}
               borderStyle="solid"
               maxWidth="200px"
@@ -52,7 +52,7 @@ const Page = () => {
           <Heading as="h3" variant="section-title">
             About Me
           </Heading>
-          <Paragraph>I am an adaptable full stack developer and UX designer based in California. I am passionate in improving the experience of people. With my curiosity to learn, I am confident in creating great products that anybody can use.
+          <Paragraph>I am an adaptable full stack developer with some UX experience. I am passionate in improving the experience of people. With my curiosity to learn, I am confident in creating great products that anybody can use.
           </Paragraph>
           <Box align="left" my={4} size="lg">
             <NextLink href="/about">

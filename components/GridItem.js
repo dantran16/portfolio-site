@@ -35,11 +35,11 @@ export const ProjectGridItem = ({ children, id, title, thumbnail }) => {
             placeholder="blur"
           />
           <LinkOverlay href={`/projects/${id}`}>
-            <Text fontWeight={500} mt={2} fontSize={24}>
+            <Text textAlign={'left'} fontWeight={500} mt={1} fontSize={24}>
               {title}
             </Text>
           </LinkOverlay>
-          <Text fontSize={16}>{children}</Text>
+          <Text textAlign={'left'}  fontSize={16}>{children}</Text>
         </LinkBox>
       </NextLink>
     </Box>
