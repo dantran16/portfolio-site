@@ -5,15 +5,10 @@ import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 
-
-
 const Page = () => {
   return (
     <Layout>
       <Container maxW='container.md'>
-        <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align="center">
-          Hello, I&apos;m a Full Stack Developer based in California!
-        </Box>
 
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
@@ -39,7 +34,7 @@ const Page = () => {
 
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
-            Projects
+            Featured Projects
           </Heading>
           <Box align="left" my={4} size="lg">
             <NextLink href="/projects">

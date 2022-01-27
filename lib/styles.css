@@ -1,3 +1,15 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 75px;
+}
+
+img::before {
+  /* ... */
+  border-radius: 4px;
+  content: "";
+  position: absolute;
+  width: 100%;
+}
 
 /* Heading Animation */
 .page-title{
@@ -39,13 +51,13 @@
 
 
 .typing-dark{
-  animation: typewriter 2s steps(40) 0.5s 1,
-  blink-text-cursor-dark 500ms steps(40) 8;
+  animation: typewriter 2s steps(40) 0.5s 1 normal both,
+  blink-text-cursor-dark 500ms steps(40) infinite;
 }
 
 .typing-light{
-  animation: typewriter 2s steps(40) 0.5s 1,
-  blink-text-cursor-light 500ms steps(40) 8;
+  animation: typewriter 2s steps(40) 0.5s 1 normal both,
+  blink-text-cursor-light 500ms steps(40) infinite;
 }
 
 @keyframes typewriter{

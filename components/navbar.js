@@ -11,6 +11,8 @@ import {
 } from '@chakra-ui/react'
 import ThemeToggleButton from './theme-toggle-button'
 import DrawerComponent from './drawer'
+
+import { FaHome as HomeIcon } from 'react-icons/fa'
 import { BsFillPersonFill as AboutIcon } from 'react-icons/bs'
 import { MdWork as ProjectsIcon, MdOutlineContactPage as ContactIcon } from 'react-icons/md'
 import LinkItem from './LinkItem'
@@ -41,6 +43,9 @@ const Navbar = props => {
           flexGrow={1}
           mt={{base:4, nmd: 0}}
         >
+          <LinkItem href="/" path={path}>
+            <Icon boxSize={3.5} as={ HomeIcon } /> <span>Home</span>
+          </LinkItem>
           <LinkItem href="/projects" path={path}>
             <Icon boxSize={3.5} as={ ProjectsIcon } /> <span>Projects</span>
           </LinkItem>
