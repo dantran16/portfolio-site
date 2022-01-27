@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Container, Tag, Link, List, ListItem, Image, UnorderedList, OrderedList, useColorModeValue, Text } from '@chakra-ui/react'
+import { Flex, Heading, Container, Tag, Link, List, ListItem, Image, UnorderedList} from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/project'
 import Paragraph from '../../components/paragraph'
