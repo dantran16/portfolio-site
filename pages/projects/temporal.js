@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Container, Badge, Link, List, ListItem, Image, UnorderedList, OrderedList, useColorModeValue, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, Container, Tag, Link, List, ListItem, Image, UnorderedList, OrderedList, useColorModeValue, Text } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/project'
 import Paragraph from '../../components/paragraph'
@@ -10,11 +10,11 @@ const Project = () => {
     <Layout title="Temporal">
       <Container>
         <Title>
-          Temporal <Badge>2019</Badge>
+          Temporal <Tag>2019</Tag>
         </Title>
         <WorkImage src="/images/projects/temporal/project1.png" alt="Temporal"/>
         <Paragraph>
-          A school project that helps facilitate task management, using the technolgies of NodeJS, Express, and MongoDB.
+          A task management app that uses timers and sounds, using the technolgies of NodeJS and Express. Made for a uni project.
         </Paragraph>
         <List ml={4} my={4}>
           <ListItem>

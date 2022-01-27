@@ -1,9 +1,12 @@
-import { Container, Box, Heading, Image, useColorModeValue, Button } from '@chakra-ui/react'
+import { Container, Box, Heading, Image, useColorModeValue, Button, SimpleGrid } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
+import { ProjectGridItem } from '../components/GridItem'
+
+import thumbTemporal from '../public/images/projects/thumb_temporal.png'
 
 const Page = () => {
   return (
@@ -36,6 +39,15 @@ const Page = () => {
           <Heading as="h3" variant="section-title">
             Featured Projects
           </Heading>
+
+          <SimpleGrid columns={[1, 1, 2]} gap={6}>
+            <Section>
+              <ProjectGridItem id="temporal" title="Temporal" thumbnail={thumbTemporal}>
+                A task management app that uses timers and sounds, using the technolgies of NodeJS and Express.
+              </ProjectGridItem>
+            </Section>
+          </SimpleGrid>
+
           <Box align="left" my={4} size="lg">
             <NextLink href="/projects">
               <Button fontSize={20} isFullWidth={true} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant='outline'>See More Projects</Button> 

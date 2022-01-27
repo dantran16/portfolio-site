@@ -29,12 +29,6 @@ const Projects = () => {
                 I designed low fidelity prototypes for BarLive&apos;s desktop website and the mobile application.
               </ProjectGridItem>
             </Section>
-            
-            <Section>
-              <ProjectGridItem id="temporal-refactored" title="Temporal Refactored" thumbnail={thumbTemporal}>
-                I remade a task management mobile web application in React and connected it to a database.
-              </ProjectGridItem>
-            </Section>
           </SimpleGrid>
         </Section>
 
@@ -55,7 +49,7 @@ const Projects = () => {
             </Section>
             <Section>
               <ProjectGridItem id="temporal" title="Temporal" thumbnail={thumbTemporal}>
-                A school project that helps facilitate task management, using the technolgies of NodeJS, Express, and MongoDB.
+                A task management app that uses timers and sounds, using the technolgies of NodeJS and Express.
               </ProjectGridItem>
             </Section>
           </SimpleGrid>
