@@ -39,7 +39,7 @@ const Projects = () => {
           <SimpleGrid columns={[1, 1, 2]} gap={6}>
             <Section>
               <ProjectGridItem id="pinterest" title="Pinterest Component Redesign" thumbnail={thumbPinterest}>
-                A school project that offers an alternative approach to Pinterest&apos;s design on its search component in 2020. Involves user testing and UX Design.
+                A UX project that offers an alternative approach to Pinterest&apos;s design on its search component in 2020. Involves user testing and UI Design.
               </ProjectGridItem>
             </Section>
             <Section>

@@ -4,6 +4,7 @@ import { Title, WorkImage, Meta } from '../../components/project'
 import Paragraph from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import Section from '../../components/section'
+import TableOfContents from '../../components/TableOfContents'
 
 const Project = () => {
   return (
@@ -12,13 +13,13 @@ const Project = () => {
         <Title>
           Temporal <Tag>2019</Tag>
         </Title>
-        <WorkImage src="/images/projects/temporal/project1.png" alt="Temporal"/>
+        <WorkImage src="/images/projects/temporal/project1.png" alt="Temporal Thumbnail"/>
         <Paragraph>
           A task management app that uses timers and sounds, using the technolgies of NodeJS and Express. Made for a uni project.
         </Paragraph>
         <List ml={4} my={4}>
           <ListItem>
-            <Meta>Timeline</Meta> January 2019 - March 2019
+            <Meta>Timeline</Meta> Jan 2019 - Mar 2019
           </ListItem>
           <ListItem>
             <Meta>Team</Meta> Dan Tran, Johnathan Tran, Angelica Ramos
@@ -27,7 +28,7 @@ const Project = () => {
             <Meta>Role</Meta> UX Designer &amp; Full Stack Developer
           </ListItem>
           <ListItem>
-            <Meta>Stack</Meta> NodeJS, Express
+            <Meta>Technologies</Meta> NodeJS, Express, Figma, Google Analytics
           </ListItem>
           <ListItem>
             <Meta>UX Design</Meta>
@@ -42,18 +43,7 @@ const Project = () => {
             </Link>
           </ListItem>
         </List>
-        <Box
-          borderRadius="lg"
-          my={3}
-          px={5}
-          py={3}
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}>
-          <Text
-            fontWeight='bold'
-            fontSize={24}
-            mb={2}
-          >Table of Contents</Text>
-          <OrderedList>
+        <TableOfContents>
             <ListItem>
               <Link href="#overview">Overview/Background</Link>
             </ListItem>
@@ -75,8 +65,7 @@ const Project = () => {
             <ListItem>
               <Link href="#conclusion">Final Product Design and Results</Link>
             </ListItem>
-          </OrderedList>
-        </Box>
+        </TableOfContents>
         <Section delay={0.1}>
           <Heading id="overview" as="h3" variant="section-title">
             Overview/Background
