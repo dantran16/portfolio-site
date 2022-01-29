@@ -32,13 +32,13 @@ const Project = () => {
           </ListItem>
           <ListItem>
             <Meta>UX Design</Meta>
-            <Link target="_blank" href="https://www.figma.com/proto/DxlH0L6EBprxwyiZ9YuJeYh4/Temporal-Task-App?node-id=363%3A0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=363%3A0">
+            <Link rel='noopener' target="_blank" href="https://www.figma.com/proto/DxlH0L6EBprxwyiZ9YuJeYh4/Temporal-Task-App?node-id=363%3A0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=363%3A0">
               Figma Prototype <ExternalLinkIcon mx="2px"/>
             </Link>
           </ListItem>
           <ListItem>
             <Meta>Code</Meta>
-            <Link target="_blank" href="https://github.com/dantran16/Temporal">
+            <Link rel='noopener' target="_blank" href="https://github.com/dantran16/Temporal">
               GitHub Repository <ExternalLinkIcon mx="2px"/>
             </Link>
           </ListItem>

@@ -3,14 +3,6 @@ html {
   scroll-padding: 75px;
 }
 
-img::before {
-  /* ... */
-  border-radius: 4px;
-  content: "";
-  position: absolute;
-  width: 100%;
-}
-
 /* Heading Animation */
 .page-title{
   animation: back 20s linear infinite;
