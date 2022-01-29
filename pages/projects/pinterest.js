@@ -3,7 +3,7 @@ import { Title, WorkImage, Meta } from "../../components/project";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import Layout from "../../components/layouts/article";
 import Paragraph from "../../components/paragraph";
-import TableOfContents from "../../components/TableOfContents";
+import TableOfContents from "../../components/tableofcontents";
 import Section from "../../components/section";
 
 const Project = () => (

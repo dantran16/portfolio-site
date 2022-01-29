@@ -4,7 +4,7 @@ import { Title, WorkImage, Meta } from '../../components/project'
 import Paragraph from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import Section from '../../components/section'
-import TableOfContents from '../../components/TableOfContents'
+import TableOfContents from '../../components/tableofcontents'
 
 const Project = () => {
   return (
