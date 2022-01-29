@@ -1,7 +1,7 @@
 import { Grid, GridItem } from '@chakra-ui/react'
 
 export const BioSection = ({ children }) => (
-  <Grid templateColumns='1fr 2fr'gap='5%' mb={4}>
+  <Grid templateColumns='1fr 2fr' mb={4}>
     {children}
   </Grid>
 )
