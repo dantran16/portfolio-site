@@ -58,16 +58,16 @@ const DrawerComponent = ({ path }) => {
         </DrawerHeader>
         <DrawerBody>
           <Stack fontSize={'xl'}>
-            <LinkItem href="/" path={path}>
+              <LinkItem onClick={onClose} href="/" path={path}>
               <Icon boxSize={4} as={ HomeIcon } /> <span>Home</span>
             </LinkItem>
-            <LinkItem href="/projects" path={path}>
+            <LinkItem onClick={onClose} href="/projects" path={path}>
               <Icon boxSize={4} as={ ProjectsIcon } /> <span>Projects</span>
             </LinkItem>
-            <LinkItem href="/about" path={path}>
+            <LinkItem onClick={onClose} href="/about" path={path}>
               <Icon boxSize={4} w={4} h={4} as={ AboutIcon } /> About
             </LinkItem>
-            <LinkItem href="/contact" path={path}>
+            <LinkItem onClick={onClose} href="/contact" path={path}>
               <Icon boxSize={4} w={4} h={4} as={ ContactIcon } /> Contact
             </LinkItem>
           </Stack>

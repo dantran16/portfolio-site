@@ -58,7 +58,7 @@ const Navbar = props => {
         </Stack>
         <Box flex={1} align="right">
           <ThemeToggleButton />
-          <DrawerComponent/>
+          <DrawerComponent path={path}/>
         </Box>
       </Container>
     </Box>
