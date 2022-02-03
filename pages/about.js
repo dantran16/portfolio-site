@@ -1,8 +1,9 @@
-import { Heading, Container } from "@chakra-ui/react"
+import { Heading, Container, Link, Button } from "@chakra-ui/react"
 import Layout from "../components/layouts/article"
 import Section from "../components/section"
 import Paragraph from "../components/paragraph"
 import { BioSection, BioYear, BioDescription } from "../components/bio"
+import { DownloadIcon } from "@chakra-ui/icons"
 
 const About = () => {
   return (
@@ -19,6 +20,9 @@ const About = () => {
           <Paragraph>
             I am an adaptable full stack developer with some UX experience. I am passionate in improving the experience of people. With my curiosity to learn, I am confident in creating great products that anybody can use.
           </Paragraph>
+          <Link href='../public/downloads/resume.pdf' download>
+            <Button fontSize={20} isFullWidth={true} leftIcon={<DownloadIcon />} colorScheme="teal" variant='outline'>Resume</Button> 
+          </Link>
         </Section>
         
         <Section delay={0.2}>
