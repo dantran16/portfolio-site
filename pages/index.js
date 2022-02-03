@@ -1,10 +1,11 @@
-import { Container, Box, Heading, Image, useColorModeValue, Button, SimpleGrid } from '@chakra-ui/react'
+import { Container, Box, Heading, Image, useColorModeValue, Button, SimpleGrid, IconButton, Link } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon, PhoneIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import { ProjectGridItem } from '../components/GridItem'
+import { FaGithub as GitHub } from 'react-icons/fa'
 
 import thumbTemporal from '../public/images/projects/thumb_temporal.png'
 
@@ -79,11 +80,6 @@ const Page = () => {
           </Heading>
         </Section>
 
-        <Section delay={0.4}>
-          <Heading as="h3" variant="section-title">
-            Links
-          </Heading>
-        </Section>
       </Container>
     </Layout>
   )
