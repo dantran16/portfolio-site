@@ -1,23 +1,39 @@
-import React, { useState } from 'react';
-import { FormControl, FormLabel, Input, FormHelperText, FormErrorMessage, Textarea, Container, Heading, Button } from '@chakra-ui/react';
+import React, { useState } from 'react'
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  FormHelperText,
+  FormErrorMessage,
+  Textarea,
+  Container,
+  Heading,
+  Button,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+  CloseButton
+} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import Section from '../components/section';
+import Section from '../components/section'
 
-const EmailInput = ({email, handleEmailChange}) => {
-  const isError = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+const EmailInput = ({ email, handleEmailChange }) => {
+  const isError = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)
 
   return (
-    <FormControl isInvalid={isError}>
-      <FormLabel htmlFor='email'>Your Email</FormLabel>
+    <FormControl mb={3} isInvalid={isError}>
+      <FormLabel htmlFor="email">Your Email</FormLabel>
       <Input
-        id='email'
-        type='email'
+        id="email"
+        type="email"
         value={email}
         onChange={handleEmailChange}
+        fontSize={18}
       />
       {!isError ? (
-        <FormHelperText>
-          Enter your email!
+        <FormHelperText color="green">
+          You typed in your email correctly!
         </FormHelperText>
       ) : (
         <FormErrorMessage>Email is required.</FormErrorMessage>
@@ -26,25 +42,22 @@ const EmailInput = ({email, handleEmailChange}) => {
   )
 }
 
-
-const MessageInput = ({message, handleMessageChange}) => {
-
-
+const MessageInput = ({ message, handleMessageChange }) => {
   const isError = message.length < 2
 
   return (
     <FormControl isInvalid={isError}>
-      <FormLabel htmlFor='message'>Your message</FormLabel>
+      <FormLabel htmlFor="message">Your message</FormLabel>
       <Textarea
-        id='message'
+        id="message"
         value={message}
         onChange={handleMessageChange}
-        size='lg'
+        size="lg"
         height={200}
       />
       {!isError ? (
-        <FormHelperText>
-          Enter the message you want to send me!
+        <FormHelperText color="green">
+          You wrote enough characters!
         </FormHelperText>
       ) : (
         <FormErrorMessage>Message is required.</FormErrorMessage>
@@ -53,45 +66,47 @@ const MessageInput = ({message, handleMessageChange}) => {
   )
 }
 
-
 const Contact = () => {
   const [email, setEmail] = useState('')
-  const handleEmailChange = (event) => setEmail(event.target.value)
+  const handleEmailChange = event => setEmail(event.target.value)
 
   const [message, setMessage] = useState('')
-  const handleMessageChange = (event) => setMessage(event.target.value)
+  const handleMessageChange = event => setMessage(event.target.value)
 
-  const [status, setStatus] = useState("Submit")
+  const [status, setStatus] = useState('Submit')
 
-  const handleSubmit = async (e) => {
+  const [submitted, setSubmitted] = useState('')
+
+  const handleSubmit = async e => {
     e.preventDefault()
-    setStatus("Sending...")
+    setStatus('Sending...')
     const data = {
       email,
       message
     }
 
-    fetch("/api/contact", {
-      method: "POST",
+    fetch('/api/contact', {
+      method: 'POST',
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        "Content-Type": "application/json",
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
-    }).then((res) => {
+    }).then(res => {
       console.log(`Response Received ${res.status}`)
       if (res.status === 200) {
         console.log('Response succeeded!')
-        setStatus("Submit")
+        setStatus('Submit')
         setEmail('')
         setMessage('')
+        setSubmitted('You have successfully submitted!')
       }
-    });
+    })
   }
 
   return (
     <Layout>
-      <Container maxW='container.md'>
+      <Container maxW="container.md">
         <Heading as="h3" fontSize={36} mb={4}>
           Contact
         </Heading>
@@ -99,17 +114,41 @@ const Contact = () => {
           <Heading as="h3" variant="section-title">
             Contact Form
           </Heading>
-          <form onSubmit={handleSubmit}>
-            <EmailInput email={email} setEmail={setEmail} handleEmailChange={handleEmailChange} />
-            <MessageInput message={message} setMessage={setMessage} handleMessageChange={handleMessageChange} />
-            <Button isFullWidth colorScheme='teal' type="submit">{status}</Button>
+          {submitted ? (
+            <Alert
+              status="success"
+              mt={3}
+              variant="subtle"
+              flexDirection="column"
+            >
+              <AlertIcon />
+              <AlertTitle mr={2}>{submitted}</AlertTitle>
+              <AlertDescription>
+                You have sent an email to dantranux@gmail.com
+              </AlertDescription>
+            </Alert>
+          ) : (
+            <></>
+          )}
+          <form mb={3} onSubmit={handleSubmit}>
+            <EmailInput
+              email={email}
+              setEmail={setEmail}
+              handleEmailChange={handleEmailChange}
+            />
+            <MessageInput
+              message={message}
+              setMessage={setMessage}
+              handleMessageChange={handleMessageChange}
+            />
+            <Button mt={3} isFullWidth colorScheme="teal" type="submit">
+              {status}
+            </Button>
           </form>
         </Section>
       </Container>
     </Layout>
-    
-    
   )
 }
 
-export default Contact;
+export default Contact
