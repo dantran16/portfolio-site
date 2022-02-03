@@ -13,7 +13,6 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-  CloseButton
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -120,6 +119,8 @@ const Contact = () => {
               mt={3}
               variant="subtle"
               flexDirection="column"
+              py={50}
+              mb={3}
             >
               <AlertIcon />
               <AlertTitle mr={2}>{submitted}</AlertTitle>
