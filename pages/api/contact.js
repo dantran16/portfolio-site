@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async function (req, res) {
   require('dotenv').config()
 
@@ -31,4 +32,5 @@ export default async function (req, res) {
   })
   
   res.status(200)
+  res.send()
 }
