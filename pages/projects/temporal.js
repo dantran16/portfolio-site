@@ -9,7 +9,7 @@ import TableOfContents from '../../components/tableofcontents'
 const Project = () => {
   return (
     <Layout title="Temporal">
-      <Container>
+      <Container maxW='container.md'>
         <Title>
           Temporal <Tag>2019</Tag>
         </Title>

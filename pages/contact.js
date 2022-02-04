@@ -13,9 +13,11 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
+  Link, 
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
 
 const EmailInput = ({ email, handleEmailChange }) => {
   const isError = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)
@@ -106,13 +108,16 @@ const Contact = () => {
   return (
     <Layout>
       <Container maxW="container.md">
-        <Heading as="h3" fontSize={36} mb={4}>
-          Contact
-        </Heading>
         <Section delay={0.1}>
-          <Heading as="h3" variant="section-title">
-            Contact Form
+          <Heading as="h3" fontSize={36} variant="section-title">
+            Contact
           </Heading>
+          <Paragraph>
+            Feel free to reach out if you have any questions or want to chat!
+          </Paragraph>
+          <Paragraph>If you prefer a different way of contacting me, reach out to my <Link rel="noopener" target="_blank" href="https://www.linkedin.com/in/dantranux/">LinkedIn
+          </Link> with a note!</Paragraph>
+          
           {submitted ? (
             <Alert
               status="success"

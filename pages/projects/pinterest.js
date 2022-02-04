@@ -8,7 +8,7 @@ import Section from "../../components/section";
 
 const Project = () => (
   <Layout title="Pinterest">
-    <Container>
+    <Container maxW='container.md'>
       <Title>
           Pinterest Component Redesign <Tag>2020</Tag>
       </Title>
