@@ -1,4 +1,12 @@
-import { Container, Box, Heading, Image, useColorModeValue, Button, SimpleGrid } from '@chakra-ui/react'
+import {
+  Container,
+  Box,
+  Heading,
+  Image,
+  useColorModeValue,
+  Button,
+  SimpleGrid
+} from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
@@ -7,29 +15,57 @@ import Layout from '../components/layouts/article'
 import { ProjectGridItem } from '../components/GridItem'
 
 import thumbTemporal from '../public/images/projects/thumb_temporal.png'
+import thumbStratbook from '../public/images/projects/thumb_stratbook.png'
 
 const Page = () => {
   return (
     <Layout>
-      <Container maxW='container.md'>
-
+      <Container maxW="container.md">
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
-            <Heading className={useColorModeValue('page-title-light', 'page-title-dark') + ' ' + 'page-title'} as="h2" variant="page-title">
+            <Heading
+              className={
+                useColorModeValue('page-title-light', 'page-title-dark') +
+                ' ' +
+                'page-title'
+              }
+              as="h2"
+              variant="page-title"
+            >
               Dan Tran
             </Heading>
-            <p className={'line' + ' ' + useColorModeValue('typing-light', 'typing-dark')}>
+            <p
+              className={
+                'line' + ' ' + useColorModeValue('typing-light', 'typing-dark')
+              }
+            >
               Full Stack Developer
             </p>
             <Box align="left" my={4} size="lg">
-            <NextLink href="/contact">
-              <Button fontSize={20} isFullWidth={true} leftIcon={<PhoneIcon />} colorScheme="teal" variant='outline'>Contact Me</Button> 
-            </NextLink>
+              <NextLink href="/contact">
+                <Button
+                  fontSize={20}
+                  isFullWidth={true}
+                  leftIcon={<PhoneIcon />}
+                  colorScheme="teal"
+                  variant="outline"
+                >
+                  Contact Me
+                </Button>
+              </NextLink>
+            </Box>
           </Box>
-          </Box>
-          <Box flexShrink={0} mt={{base:4, md: 0}} mx={{md: 75}} align="center" >
+          <Box
+            flexShrink={0}
+            mt={{ base: 4, md: 0 }}
+            mx={{ md: 75 }}
+            align="center"
+          >
             <Image
-              borderColor={useColorModeValue("blackAlpha.600", "whiteAlpha.800")}
+              borderColor={useColorModeValue(
+                'blackAlpha.600',
+                'whiteAlpha.800'
+              )}
               borderWidth={2}
               borderStyle="solid"
               maxWidth="200px"
@@ -47,15 +83,38 @@ const Page = () => {
 
           <SimpleGrid columns={[1, 1, 2]} gap={6}>
             <Section>
-              <ProjectGridItem id="temporal" title="Temporal" thumbnail={thumbTemporal}>
-                A task management app that uses timers and sounds, using the technolgies of NodeJS and Express.
+              <ProjectGridItem
+                id="temporal"
+                title="Temporal"
+                thumbnail={thumbTemporal}
+              >
+                A task management app that uses timers and sounds, using the
+                technolgies of NodeJS and Express.
+              </ProjectGridItem>
+            </Section>
+            <Section>
+              <ProjectGridItem
+                id="stratbook"
+                title="Stratbook"
+                thumbnail={thumbStratbook}
+              >
+                A web application that helps CS:GO teams organize their
+                strategies in one place.
               </ProjectGridItem>
             </Section>
           </SimpleGrid>
 
           <Box align="left" my={4} size="lg">
             <NextLink href="/projects">
-              <Button fontSize={20} isFullWidth={true} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant='outline'>See More Projects</Button> 
+              <Button
+                fontSize={20}
+                isFullWidth={true}
+                rightIcon={<ChevronRightIcon />}
+                colorScheme="teal"
+                variant="outline"
+              >
+                See More Projects
+              </Button>
             </NextLink>
           </Box>
         </Section>
@@ -64,18 +123,29 @@ const Page = () => {
           <Heading as="h3" variant="section-title">
             About Me
           </Heading>
-          <Paragraph>I am an adaptable full stack developer with some UX experience. I am passionate in improving the experience of people. With my curiosity to learn, I am confident in creating great products that anybody can use.
+          <Paragraph>
+            I am an adaptable full stack developer with some UX experience. I am
+            passionate in improving the experience of people. With my curiosity
+            to learn, I am confident in creating great products that anybody can
+            use.
           </Paragraph>
           <Box align="left" my={4} size="lg">
             <NextLink href="/about">
-              <Button fontSize={20} isFullWidth={true} rightIcon={<ChevronRightIcon />} colorScheme="teal" variant='outline'>Learn More About Me</Button> 
+              <Button
+                fontSize={20}
+                isFullWidth={true}
+                rightIcon={<ChevronRightIcon />}
+                colorScheme="teal"
+                variant="outline"
+              >
+                Learn More About Me
+              </Button>
             </NextLink>
           </Box>
         </Section>
-
       </Container>
     </Layout>
   )
 }
 
-export default Page;
+export default Page

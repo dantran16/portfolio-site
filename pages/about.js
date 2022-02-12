@@ -50,19 +50,19 @@ const About = () => {
           </Heading>
           <Grid templateColumns={{base: '1fr', md: 'repeat(3, 1fr)'}} gap={5}>
             <GridItem display='flex' flexDirection='column' justify='space-around'>
-              <Text borderBottom='2px solid' mb={2} fontWeight={700} fontSize={24}>Web Development</Text>
+              <Text borderBottom='2px solid rgba(255,255,255, .5)' fontWeight={700} fontSize={24}>Web Development</Text>
               <Text>HTML, CSS, Javascript, React, NodeJS, React Native, Express, MongoDB, PostgreSQL</Text>
             </GridItem>
             <GridItem display='flex' flexDirection='column' justify='space-around'>
-              <Text borderBottom='2px solid' mb={2} fontWeight={700} fontSize={24}>UX/UI Design</Text>
+              <Text borderBottom='2px solid rgba(255,255,255, .5)' mb={2} fontWeight={700} fontSize={24}>UX/UI Design</Text>
               <Text>Figma, Adobe XD, User Testing, Sketching, Prototyping</Text>
             </GridItem>
             <GridItem display='flex' flexDirection='column' justify='space-around'>
-              <Text borderBottom='2px solid' mb={2} fontWeight={700} fontSize={24}>Programming</Text>
-              <Text>JavaScript, Python, Java, C, SQL, Racket, VS Code </Text>
+              <Text borderBottom='2px solid rgba(255,255,255, .5)' fontWeight={700} fontSize={24}>Programming</Text>
+              <Text>JavaScript, Python, Java, C, SQL, Racket, VS Code, Github, Git Bash </Text>
             </GridItem>
             <GridItem display='flex' flexDirection='column' justify='space-around'>
-              <Text borderBottom='2px solid' mb={2} fontWeight={700} fontSize={24}>Video Editing</Text>
+              <Text borderBottom='2px solid rgba(255,255,255, .5)' fontWeight={700} fontSize={24}>Video Editing</Text>
               <Text>Premiere Pro, After Effects, Sony Vegas</Text>
             </GridItem>
           </Grid>

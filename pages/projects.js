@@ -5,6 +5,7 @@ import Layout from '../components/layouts/article'
 
 import thumbTemporal from '../public/images/projects/thumb_temporal.png'
 import thumbPinterest from '../public/images/projects/thumb_pinterest.jpg'
+import thumbStratbook from '../public/images/projects/thumb_stratbook.png'
 import placeHolder from '../public/images/placeholder.png'
 
 const Projects = () => {
@@ -20,8 +21,8 @@ const Projects = () => {
           </Heading>
           <SimpleGrid columns={[1, 1, 2]} gap={6}>
             <Section>
-              <ProjectGridItem id="stratlog" title="Stratlog" thumbnail={placeHolder}>
-                I made a web application that helps CS:GO players remember their strategies.
+              <ProjectGridItem id="stratbook" title="Stratbook" thumbnail={thumbStratbook}>
+                A web application that helps CS:GO teams organize their strategies in one place. 
               </ProjectGridItem>
             </Section>
             <Section>
