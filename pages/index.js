@@ -97,7 +97,7 @@ const Page = () => {
                 title="Stratbook"
                 thumbnail={thumbStratbook}
               >
-                A web application that helps CS:GO teams organize their
+                A personal web application that helps CS:GO teams organize their
                 strategies in one place.
               </ProjectGridItem>
             </Section>

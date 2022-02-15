@@ -19,7 +19,7 @@ const Project = () => (
   
         <List ml={4} my={4}>
           <ListItem>
-            <Meta>Timeline</Meta> Jul 2020 - Aug 2020
+            <Meta>Timeline</Meta> Jul 2021 - Aug 2021
           </ListItem>
           <ListItem>
             <Meta>Team</Meta> Dan Tran
