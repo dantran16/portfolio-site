@@ -65,7 +65,7 @@ const Project = () => (
           <Heading id="images" as="h3" variant="section-title">
             Images
           </Heading>
-          <WorkImage src="/images/projects/barlive/stratbook1.png" alt="Stratgey Page" />
+          <WorkImage src="/images/projects/stratbook/stratbook1.png" alt="Stratgey Page" />
           <WorkImage src="/images/projects/stratbook/stratbook2.png" alt="Dashboard/All Strategies Page" />
           <WorkImage src="/images/projects/stratbook/stratbook3.png" alt="Player page of the strategy"/>
         </Section>
