@@ -88,8 +88,7 @@ const Page = () => {
                 title="Temporal"
                 thumbnail={thumbTemporal}
               >
-                A task management app that uses timers and sounds, using the
-                technolgies of NodeJS and Express.
+                A school project where we made a task management app that uses timers and sounds, using the technolgies of NodeJS and Express.
               </ProjectGridItem>
             </Section>
             <Section>

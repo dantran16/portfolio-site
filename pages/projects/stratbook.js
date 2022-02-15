@@ -1,4 +1,4 @@
-import { Flex, Heading, Container, Tag, Link, List, ListItem, Image, UnorderedList} from '@chakra-ui/react'
+import { Heading, Container, Tag, Link, List, ListItem} from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/project'
 import Paragraph from '../../components/paragraph'
@@ -7,14 +7,14 @@ import Section from '../../components/section'
 import TableOfContents from '../../components/tableofcontents'
 
 const Project = () => (
-    <Layout title="Pinterest">
+    <Layout title="Stratbook">
       <Container maxW='container.md'>
         <Title>
             Stratbook <Tag>2021</Tag>
         </Title>
         <WorkImage src="/images/projects/thumb_stratbook.png" alt="Stratbook thumbnail" />
         <Paragraph>
-          A web application that helps CS:GO teams organize their strategies in one place.
+          A personal web application that helps CS:GO teams organize their strategies in one place.
         </Paragraph>
   
         <List ml={4} my={4}>
@@ -45,14 +45,14 @@ const Project = () => (
         </List>
         <TableOfContents>
           <ListItem>
-            <Link href="#overview">Overview/Background</Link>
+            <Link href="#description">Description</Link>
           </ListItem>
           <ListItem>
             <Link href="#images">Images</Link>
           </ListItem>
         </TableOfContents>
         <Section delay={0.1}>
-          <Heading id="overview" as="h3" variant="section-title">
+          <Heading id="description" as="h3" variant="section-title">
             Description
           </Heading>
           <Paragraph>Back when I played on an amateur CS:GO team, I always wished there was some way to store my strategies. I needed an easy way to share this information to the rest of the team. I also needed a place to store strategies that I rarely use. This is where this idea came in.</Paragraph>
@@ -65,7 +65,7 @@ const Project = () => (
           <Heading id="images" as="h3" variant="section-title">
             Images
           </Heading>
-          <WorkImage src="/images/projects/stratbook/stratbook1.png" alt="Stratgey Page" />
+          <WorkImage src="/images/projects/barlive/stratbook1.png" alt="Stratgey Page" />
           <WorkImage src="/images/projects/stratbook/stratbook2.png" alt="Dashboard/All Strategies Page" />
           <WorkImage src="/images/projects/stratbook/stratbook3.png" alt="Player page of the strategy"/>
         </Section>

@@ -116,7 +116,7 @@ const Contact = () => {
             Feel free to reach out if you have any questions or want to chat!
           </Paragraph>
           <Paragraph>If you prefer a different way of contacting me, reach out to my <Link rel="noopener" target="_blank" href="https://www.linkedin.com/in/dantranux/">LinkedIn
-          </Link> with a note!</Paragraph>
+          </Link> with a note or emailing me at <b>dantranux@gmail.com</b>!</Paragraph>
           
           {submitted ? (
             <Alert

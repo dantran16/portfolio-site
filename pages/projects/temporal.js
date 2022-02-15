@@ -15,7 +15,7 @@ const Project = () => {
         </Title>
         <WorkImage src="/images/projects/temporal/project1.png" alt="Temporal Thumbnail"/>
         <Paragraph>
-          A task management app that uses timers and sounds, using the technolgies of NodeJS and Express. Made for a uni project.
+          A school project where we made a task management app that uses timers and sounds, using the technolgies of NodeJS and Express.
         </Paragraph>
         <List ml={4} my={4}>
           <ListItem>

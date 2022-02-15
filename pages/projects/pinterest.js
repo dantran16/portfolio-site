@@ -14,9 +14,8 @@ const Project = () => (
       </Title>
       <WorkImage src="/images/projects/pinterest/project2.jpg" alt="Pinterest Thumbnail" />
       <Paragraph>
-        A UX project that offers an alternative approach to Pinterest&apos;s design on its search component in 2020. Involves user testing and UI Design.
+        A school UX project that offers an alternative approach to Pinterest&apos;s design on its search component in 2020. Involves user testing and UI Design.
       </Paragraph>
-
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Timeline</Meta> Nov 2020 - Dec 2020
